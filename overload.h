@@ -40,7 +40,7 @@ inline Matrix<T, N>& Matrix<T, N>::operator*=(const Matrix<T, N> &rhs)
 
 template<typename T, int N>
 template<typename U>
-inline typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type Matrix<T, N>::operator*=(const T& rhs)
+inline typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type Matrix<T, N>::operator*=(const U& rhs)
 {
   *this = *this * rhs;
   return *this;
@@ -48,7 +48,7 @@ inline typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type Matrix<T
 
 template<typename T, int N>
 template<typename U>
-inline typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type Matrix<T, N>::operator/=(const T& rhs)
+inline typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type Matrix<T, N>::operator/=(const U& rhs)
 {
   *this = *this / rhs;
   return *this;
