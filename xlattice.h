@@ -21,7 +21,8 @@
 // #define WITH_GRID
 
 #ifdef WITH_GRID
-#include "Grid/xlattice_grid.h"
+#include <Grid/Grid.h>
+#include "./Grid/xlattice_grid.h"
 #endif
 
 // std::vector<int> default_grid;
@@ -34,7 +35,7 @@
 #include "type.h"
 
 #ifdef WITH_MPI3
-#include "communicator.h"
+#include "mpi/communicator.h"
 #include "cartesian.h"
 #endif
 

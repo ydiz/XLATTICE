@@ -58,6 +58,42 @@ inline auto trace(const Field<T, N>& U) -> Field<decltype(trace(U[0][0])), N>
   return ret;
 }
 
+
+///////////////////
+// Ta
+///////////////////
+template<typename T, int N>
+inline Matrix<T, N> Ta(const Matrix<T, N> &mat)
+{
+  Matrix<T, N> ret;
+  for(int i=0; i<N; ++i)
+    for(int j=0; j<N; ++j)
+      ret.m[i][j] = mat.m[i][j] - std::conj(mat.m[j][i]);
+
+  T tr = trace(ret) / double(N);
+  for(int i=0; i<N; ++i) ret.m[i][i] -= tr;
+  return ret;
+}
+
+template<typename T>
+inline Lattice<T> Ta(const Lattice<T> &lat)
+{
+  Lattice<T> ret(lat.grid);
+  for(int i=0; i<lat.grid.volLocal; ++i) ret._data[i] = Ta(lat._data[i]);
+  return ret;
+}
+
+template<typename T, int N>
+inline Field<T, N> Ta(const Field<T, N> &U)
+{
+  Field<T, N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = Ta(U._data[i]);
+  return ret;
+}
+
+
+
+
 ///////////////////
 // sum
 ///////////////////
