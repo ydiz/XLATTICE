@@ -5,6 +5,7 @@ template<typename T, int N>
 class Matrix{
 public:
   T m[N][N];
+
   //construtors
   Matrix();
   template<typename U> Matrix(const U&); //any "number"; isNumber
@@ -21,9 +22,9 @@ public:
   Matrix<T, N>& operator-=(const Matrix<T, N> &rhs);
   Matrix<T, N>& operator*=(const Matrix<T, N> &rhs);
   template<typename U>
-  typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type operator*=(const T &rhs);
+  typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type operator*=(const U &rhs);
   template<typename U>
-  typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type operator/=(const T &rhs);
+  typename std::enable_if<isNumber<U>::value, Matrix<T, N>&>::type operator/=(const U &rhs);
 
   // conversion to Grid tensor
   #ifdef WITH_GRID

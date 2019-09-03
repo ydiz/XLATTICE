@@ -125,13 +125,11 @@ inline std::vector<int> operator%(const std::vector<int> &v1, const std::vector<
 
 std::complex<double> operator+(const std::complex<double> &c, int x)
 {
-  // std::complex<double> ret;
   return std::complex<double>(c.real() + x, c.imag());
 }
 
 std::complex<double> operator*(const std::complex<double> &c, int x)
 {
-  // std::complex<double> ret;
   return std::complex<double>(c.real() * x, c.imag() * x);
 }
 
@@ -149,9 +147,9 @@ std::ostream& operator<<(std::ostream& out, std::array<T, N> a)
   for(int i=0; i<N; ++i)
   {
     if(i==N-1)
-      out << x << "]";
+      out << a[i] << "]";
     else
-      out << x << ", ";
+      out << a[i] << ", ";
   }
   return out;
 }

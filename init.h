@@ -3,11 +3,10 @@
 
 // move to init.cc
 
-static std::vector<int> _defaultMPI {1,1,2,2};
-static std::vector<int> _defaultLat {8,8,8,8};
-// static std::vector<int> _defaultLat {4,4,4,4};
-static int _defaultLocalVol = 64;
-static int _defaultGlobalVol = 256;
+// static std::vector<int> _defaultMPI {1,1,2,2};
+static std::vector<int> _defaultMPI {1,1,1,1};
+// static std::vector<int> _defaultLat {8,8,8,8};
+static std::vector<int> _defaultLat {4,4,4,4};
 
 std::vector<int> defaultMPI(){
   return _defaultMPI;
@@ -15,14 +14,6 @@ std::vector<int> defaultMPI(){
 
 std::vector<int> defaultLat(){
   return _defaultLat;
-}
-
-int defaultLocalVol(){
-  return _defaultLocalVol;
-}
-
-int defaultGlobalVol(){
-  return _defaultGlobalVol;
 }
 
 
@@ -39,8 +30,9 @@ void unquiesce_node()
 }
 
 
-void Xlattice_init()
+void init(int argc, char **argv)
 {
+  MPI_Init(&argc, &argv);
   quiesce_node();
 }
 

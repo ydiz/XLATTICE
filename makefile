@@ -1,23 +1,21 @@
-CC = clang++
-CXX = clang++
+# for hadron, add -fpermissive to CXXFLAGS
 
-CXXFLAGS = -mavx -mf16c -std=c++11 -Wall -O3 -MT GF_heatbath.o -DHAVE_CONFIG_H -I. -I/home/yz/Grid/include -I/usr/lib/x86_64-linux-gnu/include
+CXX = mpicxx
 
-#-fopenmp=libomp
+# CXXFLAGS = -I/home/ydzhao/cuth/install/boost/include -I/home/ydzhao/cuth/install/Grid/include -I/home/ydzhao/cuth/install/openmpi-3.1.0/include -I/home/ydzhao/cuth/install/hdf5-1.8.20/include -I/home/ydzhao/cuth/install/LIME/include -I/home/ydzhao/cuth/install/fftw-3.3.8/include -fopenmp -O3 -std=c++11
+CXXFLAGS = -I/home/ydzhao/cuth/install/boost/include -I/home/ydzhao/cuth/install/Grid/include -I/home/ydzhao/cuth/install/openmpi-3.1.0/include -I/home/ydzhao/cuth/install/hdf5-1.8.20/include -I/home/ydzhao/cuth/install/LIME/include -I/home/ydzhao/cuth/install/fftw-3.3.8/include -fopenmp -std=c++11
 
-#LINK.o = $(CXX) $(LDFLAGS)
-LDFLAGS = -mavx -mf16c -std=c++11 -O3 -I. -I/home/yz/Grid/include -I/usr/lib/x86_64-linux-gnu/include
-#-fopenmp=libomp
-#LDFLAGS = -mavx -mf16c -fopenmp  -O3  -std=c++11
-LDLIBS = -lGrid -lz -lmpfr -lgmp -lstdc++ -lm  -lz
+LDFLAGS = -L/home/ydzhao/cuth/install/boost/lib -L/home/ydzhao/cuth/install/Grid/lib -L/home/ydzhao/cuth/install/openmpi-3.1.0/lib -Wl,-rpath -Wl,/home/ydzhao/cuth/install/openmpi-3.1.0/lib -L/home/ydzhao/cuth/install/hdf5-1.8.20/lib -L/home/ydzhao/cuth/install/LIME/lib -L/home/ydzhao/cuth/install/fftw-3.3.8/lib -fopenmp
 
+LIBS = -lboost_program_options -lGrid -lmpi_cxx -lmpi -Wl,-rpath -Wl,/home/ydzhao/cuth/install/openmpi-3.1.0/lib  -lhdf5_cpp -lz -lcrypto -llime -lfftw3f -lfftw3 -lmpfr -lgmp -lstdc++ -lm -lrt -lz -lhdf5
 
-test_grid: test_grid.o
-	clang++ -g -I/home/yz/Grid/include -I/usr/lib/x86_64-linux-gnu/include -mavx -mf16c  -O3 -std=c++11 -L/home/yz/Grid/lib -L/usr/lib/x86_64-linux-gnu/lib  -o test_grid test_grid.o -lGrid -lnuma -lz -lfftw3f -lfftw3 -lmpfr -lgmp -lstdc++ -lm  -lz -lnuma
+TARGET = test
 
-test_grid.o: test_grid.cc
-	clang++ -g -DHAVE_CONFIG_H -I.    -I/home/yz/Grid/include -I/usr/lib/x86_64-linux-gnu/include -mavx -mf16c -O3 -std=c++11 -MT test_grid.o  -c -o test_grid.o test_grid.cc
-
-
+$(TARGET): FORCE
+	$(CXX) $(CXXFLAGS) -c -o $(TARGET).o $(TARGET).cc
+	$(CXX) $(LDFLAGS) -o $@ $(TARGET).o $(LIBS)
+    
 clean:
-	- rm *.o
+	-rm *.o
+
+.PHONY: FORCE
