@@ -23,11 +23,11 @@ inline Lattice<T> adj(const Lattice<T> &lat)
   return ret;
 }
 
-template<typename T>
-inline Field<T> adj(const Field<T> &U)
+template<typename T, int N>
+inline Field<T, N> adj(const Field<T, N> &U)
 {
-  Field<T> ret;
-  for(int i=0; i<Nd; ++i) ret._data[i] = adj(U._data[i]);
+  Field<T, N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = adj(U._data[i]);
   return ret;
 }
 
@@ -50,11 +50,11 @@ inline auto trace(const Lattice<T> &lat) -> Lattice<decltype(trace(lat[0]))>
   return ret;
 }
 
-template<typename T>
-inline auto trace(const Field<T>& U) -> Field<decltype(trace(U[0][0]))>
+template<typename T, int N>
+inline auto trace(const Field<T, N>& U) -> Field<decltype(trace(U[0][0])), N>
 {
-  Field<decltype(trace(U[0][0]))> ret;
-  for(int i=0; i<Nd; ++i) ret._data[i] = trace(U._data[i]);
+  Field<decltype(trace(U[0][0])), N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = trace(U._data[i]);
   return ret;
 }
 
@@ -71,11 +71,11 @@ inline T sum(const Lattice<T>& lat)
   return ret;
 }
 
-template<typename T>
-inline T sum(const Field<T>& U)
+template<typename T, int N>
+inline T sum(const Field<T, N>& U)
 {
   T ret;
-  for(int mu=0; mu<Nd; ++mu) ret += sum(U._data[mu]);
+  for(int mu=0; mu<N; ++mu) ret += sum(U._data[mu]);
   return ret;
 }
 
@@ -104,11 +104,11 @@ inline auto real(const Lattice<T> &lat) -> Lattice<decltype(real(lat[0]))>
   return ret;
 }
 
-template<typename T>
-inline auto real(const Field<T>& U) -> Field<decltype(real(U[0][0]))>
+template<typename T, int N>
+inline auto real(const Field<T, N>& U) -> Field<decltype(real(U[0][0])), N>
 {
-  Field<decltype(real(U[0][0]))> ret;
-  for(int i=0; i<Nd; ++i) ret._data[i] = real(U._data[i]);
+  Field<decltype(real(U[0][0])), N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = real(U._data[i]);
   return ret;
 }
 

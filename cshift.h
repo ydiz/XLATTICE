@@ -62,19 +62,19 @@ Lattice<T> shiftB(const Lattice<T> &lat, int dim)
 // cout << shiftF(coor, 2);
 
 
-template<typename T>
-Field<T> shiftF(const Field<T> &fld, int dim)
+template<typename T, int N>
+Field<T, N> shiftF(const Field<T, N> &fld, int dim)
 {
-  Field<T> ret;
-  for(int i=0; i<Nd; ++i) ret._data[i] = shiftF(fld._data[i], dim);
+  Field<T, N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = shiftF(fld._data[i], dim);
   return ret;
 }
 
-template<typename T>
-Field<T> shiftB(const Field<T> &fld, int dim)
+template<typename T, int N>
+Field<T, N> shiftB(const Field<T, N> &fld, int dim)
 {
-  Field<T> ret;
-  for(int i=0; i<Nd; ++i) ret._data[i] = shiftB(fld._data[i], dim);
+  Field<T, N> ret;
+  for(int i=0; i<N; ++i) ret._data[i] = shiftB(fld._data[i], dim);
   return ret;
 }
 

@@ -38,11 +38,13 @@
 #include "cartesian.h"
 #endif
 
-#include "matrix.h"
-#include "vector.h"
-#include "lattice.h"
-#include "field.h"
-#include "overload.h"
+#include "tensors/matrix.h"
+#include "tensors/vector.h"
+#include "tensors/overload.h"
+
+#include "field/lattice.h"
+#include "field/field.h"
+#include "field/overload.h"
 #include "unary.h"
 #include "cshift.h"
 

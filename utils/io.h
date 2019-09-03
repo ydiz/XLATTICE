@@ -80,7 +80,7 @@ GaugeField readField(const std::string& filename, bool verbose=0) // verbose: pr
   // Complex vector -> GaugeField
   GaugeField U(grid);
   for(int i=0; i<node_size_in_complex; ){
-    for(int mu=0; mu<Nd; ++mu){
+    for(int mu=0; mu<4; ++mu){
       std::copy(&cc[i], &cc[i+9], *(U[mu][i/36].m));
       i+=9;
     }
