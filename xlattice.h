@@ -27,11 +27,11 @@
 // std::vector<int> default_grid;
 // int default_grid_vol;
 
+#include "utils/vector.h"
 #include "init.h"
 #include "utils/util.h"
 
 #include "type.h"
-#include "utils/vector.h"
 
 #ifdef WITH_MPI3
 #include "communicator.h"
@@ -55,6 +55,8 @@
 #include "utils/observables.h"
 
 #include "RNG.h"
+
+#include "HMC/actions.h"
 
 // using Complex = std::complex<double>;
 // using Matrix3 = Matrix<Complex, 3> ;
