@@ -3,8 +3,8 @@
 
 // move to init.cc
 
-// static std::vector<int> _defaultMPI {1,1,2,2};
-static std::vector<int> _defaultMPI {1,1,1,1};
+static std::vector<int> _defaultMPI {1,1,2,2};
+// static std::vector<int> _defaultMPI {1,1,1,1};
 // static std::vector<int> _defaultLat {8,8,8,8};
 static std::vector<int> _defaultLat {4,4,4,4};
 
