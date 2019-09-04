@@ -11,3 +11,12 @@ MDsteps: 10
 Step Size: 0.1
 Wilson Action beta = 6.000000
 traj: 0
+Before trajectory: Hp0: 4113.44 S0: 0 total H0: 4113.44
+After trajectory: Hp: 3279.21 S: 843.763 total H: 4122.98
+dH: 9.53854 prob: 13884.7
+Plaq: 0.908446
+LinkTrace: 0.641349
+traj: 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 8504 ON cuth03 CANCELLED AT 2019-09-04T01:38:08 ***
+slurmstepd: error: *** STEP 8504.0 ON cuth03 CANCELLED AT 2019-09-04T01:38:08 ***

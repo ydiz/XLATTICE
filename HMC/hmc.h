@@ -51,7 +51,7 @@ public:
   void run();
 private:
   void setup();
-  void evolve_one_traj();
+  void evolve_one_traj(bool doMetro);
   bool metropolis_test(double dH);
 
   RNG<std::uniform_real_distribution<>> rng;
@@ -80,22 +80,26 @@ void HMC::setup() {
 void HMC::run() {
   setup();
 
-  for(int i=0; i<para.trajs; ++i) {
+  bool doMetro;
+  for(int i=para.start_traj; i<para.start_traj + para.trajs; ++i) {
     std::cout << "traj: " << i << std::endl;
-    evolve_one_traj();
+    doMetro = (i>=para.noMetroUnitil);
+    evolve_one_traj(doMetro);
   }
 }
 
 
 
-void HMC::evolve_one_traj() {
+void HMC::evolve_one_traj(bool doMetro) {
 
   GaugeField Ucopy = U;
 
   double dH = integrator->integrate(U);
 
-  bool success = metropolis_test(dH);
-  if(!success) U = Ucopy;
+  if(doMetro) {
+    bool success = metropolis_test(dH);
+    if(!success) U = Ucopy;
+  }
 
   std::cout << "Plaq: " << plaq(U) << std::endl;
   std::cout << "LinkTrace: " << linkTrace(U) << std::endl;
@@ -103,17 +107,27 @@ void HMC::evolve_one_traj() {
 
 
 bool HMC::metropolis_test(double dH) {
-  if(dH <= 0) return true;
+  if(dH <= 0) {
+    std::cout << "dH: " << dH << " prob: " << 1 << std::endl;
+    std::cout << "[ACCEPTED]" << std::endl;
+    return true;
+  }
 
   double rand;
   if(U.grid.Rank()==0) rand = rng();
   U.grid.Bcast(0, rand);
 
-  double prb = std::exp(dH);
+  double prb = std::exp(-dH);
 
   std::cout << "dH: " << dH << " prob: " << prb << std::endl;
 
-  if(rand < prb) return true;
-  else return false;
+  if(rand < prb) {
+    std::cout << "[ACCEPTED]" << std::endl;
+    return true;
+  }
+  else {
+    std::cout << "[REJECTED]" << std::endl;
+    return false;
+  }
 }
 

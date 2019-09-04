@@ -1,0 +1,292 @@
+Lattice size: [4, 4, 4, 4]
+MPI decomposition: [1, 1, 2, 2]
+==============================
+starting trajectory: 0
+number of trajectories: 50
+do Metropolis: true
+noMetroUnitil: 20
+Integrator Name: LeapFrog
+trajL: 1
+MDsteps: 10
+Step Size: 0.1
+Wilson Action beta = 6.000000
+traj: 0
+Before trajectory: Hp0: 4032.67 S0: 0 total H0: 4032.67
+After trajectory: Hp: 2586.23 S: 1469.93 total H: 4056.16
+Plaq: 0.840502
+LinkTrace: 0.772504
+traj: 1
+Before trajectory: Hp0: 4205.45 S0: 1469.93 total H0: 5675.38
+After trajectory: Hp: 3478.22 S: 2210.39 total H: 5688.61
+Plaq: 0.760158
+LinkTrace: 0.621746
+traj: 2
+Before trajectory: Hp0: 3926.31 S0: 2210.39 total H0: 6136.7
+After trajectory: Hp: 3689.54 S: 2451.3 total H: 6140.84
+Plaq: 0.734017
+LinkTrace: 0.510421
+traj: 3
+Before trajectory: Hp0: 4312.24 S0: 2451.3 total H0: 6763.55
+After trajectory: Hp: 3800.98 S: 2971.43 total H: 6772.41
+Plaq: 0.67758
+LinkTrace: 0.429558
+traj: 4
+Before trajectory: Hp0: 3761.71 S0: 2971.43 total H0: 6733.14
+After trajectory: Hp: 3810.34 S: 2922.62 total H: 6732.96
+Plaq: 0.682876
+LinkTrace: 0.403223
+traj: 5
+Before trajectory: Hp0: 4124.69 S0: 2922.62 total H0: 7047.31
+After trajectory: Hp: 3892.84 S: 3156.41 total H: 7049.25
+Plaq: 0.657508
+LinkTrace: 0.329893
+traj: 6
+Before trajectory: Hp0: 4366.4 S0: 3156.41 total H0: 7522.81
+After trajectory: Hp: 4015.83 S: 3512.44 total H: 7528.27
+Plaq: 0.618876
+LinkTrace: 0.250051
+traj: 7
+Before trajectory: Hp0: 4145.41 S0: 3512.44 total H0: 7657.85
+After trajectory: Hp: 4134.15 S: 3523.18 total H: 7657.33
+Plaq: 0.617711
+LinkTrace: 0.222217
+traj: 8
+Before trajectory: Hp0: 4034.1 S0: 3523.18 total H0: 7557.28
+After trajectory: Hp: 4002.1 S: 3556.04 total H: 7558.14
+Plaq: 0.614145
+LinkTrace: 0.20941
+traj: 9
+Before trajectory: Hp0: 4290.66 S0: 3556.04 total H0: 7846.7
+After trajectory: Hp: 4241.66 S: 3603.68 total H: 7845.35
+Plaq: 0.608975
+LinkTrace: 0.155364
+traj: 10
+Before trajectory: Hp0: 4213.39 S0: 3603.68 total H0: 7817.07
+After trajectory: Hp: 4197.08 S: 3621.19 total H: 7818.27
+Plaq: 0.607076
+LinkTrace: 0.141837
+traj: 11
+Before trajectory: Hp0: 3893.69 S0: 3621.19 total H0: 7514.88
+After trajectory: Hp: 3920.08 S: 3594.77 total H: 7514.85
+Plaq: 0.609943
+LinkTrace: 0.106055
+traj: 12
+Before trajectory: Hp0: 3936.23 S0: 3594.77 total H0: 7531
+After trajectory: Hp: 4030.39 S: 3499.44 total H: 7529.83
+Plaq: 0.620286
+LinkTrace: 0.0801806
+traj: 13
+Before trajectory: Hp0: 4292.27 S0: 3499.44 total H0: 7791.71
+After trajectory: Hp: 4068.85 S: 3723.83 total H: 7792.68
+Plaq: 0.595938
+LinkTrace: 0.0614693
+traj: 14
+Before trajectory: Hp0: 4142.64 S0: 3723.83 total H0: 7866.47
+After trajectory: Hp: 4109.76 S: 3758.81 total H: 7868.56
+Plaq: 0.592143
+LinkTrace: 0.0473925
+traj: 15
+Before trajectory: Hp0: 4067.34 S0: 3758.81 total H0: 7826.15
+After trajectory: Hp: 4192.17 S: 3632.63 total H: 7824.79
+Plaq: 0.605835
+LinkTrace: 0.033009
+traj: 16
+Before trajectory: Hp0: 4065.34 S0: 3632.63 total H0: 7697.96
+After trajectory: Hp: 4083.84 S: 3614.06 total H: 7697.89
+Plaq: 0.60785
+LinkTrace: 0.0493481
+traj: 17
+Before trajectory: Hp0: 4083.43 S0: 3614.06 total H0: 7697.48
+After trajectory: Hp: 3995.12 S: 3702.1 total H: 7697.22
+Plaq: 0.598296
+LinkTrace: 0.0369344
+traj: 18
+Before trajectory: Hp0: 4075.14 S0: 3702.1 total H0: 7777.25
+After trajectory: Hp: 4169.38 S: 3608.89 total H: 7778.27
+Plaq: 0.608411
+LinkTrace: 0.0191133
+traj: 19
+Before trajectory: Hp0: 4032.38 S0: 3608.89 total H0: 7641.26
+After trajectory: Hp: 4051.01 S: 3590.51 total H: 7641.52
+Plaq: 0.610405
+LinkTrace: 0.0109212
+traj: 20
+Before trajectory: Hp0: 3999.84 S0: 3590.51 total H0: 7590.35
+After trajectory: Hp: 3927.93 S: 3664.16 total H: 7592.09
+dH: 1.73362 prob: 5.6611
+Plaq: 0.602414
+LinkTrace: 0.0203526
+traj: 21
+Before trajectory: Hp0: 4363.17 S0: 3664.16 total H0: 8027.33
+After trajectory: Hp: 3963.43 S: 4068.1 total H: 8031.54
+dH: 4.20492 prob: 67.0151
+Plaq: 0.558583
+LinkTrace: 0.0220186
+traj: 22
+Before trajectory: Hp0: 4033.97 S0: 4068.1 total H0: 8102.08
+After trajectory: Hp: 4343.91 S: 3755.81 total H: 8099.73
+dH: -2.34934 prob: 1
+Plaq: 0.592468
+LinkTrace: 0.00713036
+traj: 23
+Before trajectory: Hp0: 4165.91 S0: 3755.81 total H0: 7921.72
+After trajectory: Hp: 4344.42 S: 3576.5 total H: 7920.92
+dH: -0.805538 prob: 1
+Plaq: 0.611925
+LinkTrace: 0.0188748
+traj: 24
+Before trajectory: Hp0: 3900.86 S0: 3576.5 total H0: 7477.36
+After trajectory: Hp: 4036.48 S: 3441 total H: 7477.47
+dH: 0.113457 prob: 1.12014
+Plaq: 0.626628
+LinkTrace: 0.0243059
+traj: 25
+Before trajectory: Hp0: 4289.8 S0: 3441 total H0: 7730.79
+After trajectory: Hp: 4135.99 S: 3597.29 total H: 7733.28
+dH: 2.48683 prob: 12.0231
+Plaq: 0.609669
+LinkTrace: 0.0241043
+traj: 26
+Before trajectory: Hp0: 4043.94 S0: 3597.29 total H0: 7641.23
+After trajectory: Hp: 4163.35 S: 3477.01 total H: 7640.36
+dH: -0.872522 prob: 1
+Plaq: 0.622721
+LinkTrace: 0.0218747
+traj: 27
+Before trajectory: Hp0: 4017.95 S0: 3477.01 total H0: 7494.96
+After trajectory: Hp: 4055.71 S: 3440.05 total H: 7495.76
+dH: 0.805472 prob: 2.23775
+Plaq: 0.626731
+LinkTrace: 0.0166853
+traj: 28
+Before trajectory: Hp0: 4148.28 S0: 3440.05 total H0: 7588.33
+After trajectory: Hp: 3924.46 S: 3666.02 total H: 7590.48
+dH: 2.15602 prob: 8.63669
+Plaq: 0.602211
+LinkTrace: 0.00229954
+traj: 29
+Before trajectory: Hp0: 3967.98 S0: 3666.02 total H0: 7634
+After trajectory: Hp: 3995.18 S: 3638.79 total H: 7633.97
+dH: -0.0311313 prob: 1
+Plaq: 0.605166
+LinkTrace: -0.00422331
+traj: 30
+Before trajectory: Hp0: 3996.64 S0: 3638.79 total H0: 7635.42
+After trajectory: Hp: 4026.17 S: 3609.91 total H: 7636.07
+dH: 0.651028 prob: 1.91751
+Plaq: 0.6083
+LinkTrace: 0.0112984
+traj: 31
+Before trajectory: Hp0: 3977.22 S0: 3609.91 total H0: 7587.13
+After trajectory: Hp: 3978.57 S: 3607.55 total H: 7586.12
+dH: -1.00343 prob: 1
+Plaq: 0.608555
+LinkTrace: 0.00309587
+traj: 32
+Before trajectory: Hp0: 4299.65 S0: 3607.55 total H0: 7907.21
+After trajectory: Hp: 4063.5 S: 3845.83 total H: 7909.33
+dH: 2.12521 prob: 8.37466
+Plaq: 0.582701
+LinkTrace: -0.00121128
+traj: 33
+Before trajectory: Hp0: 4030.4 S0: 3845.83 total H0: 7876.23
+After trajectory: Hp: 4081.43 S: 3794.93 total H: 7876.36
+dH: 0.129342 prob: 1.13808
+Plaq: 0.588224
+LinkTrace: -0.0214206
+traj: 34
+Before trajectory: Hp0: 3893.72 S0: 3794.93 total H0: 7688.65
+After trajectory: Hp: 3979.71 S: 3708 total H: 7687.7
+dH: -0.943958 prob: 1
+Plaq: 0.597657
+LinkTrace: -0.0139779
+traj: 35
+Before trajectory: Hp0: 4013.04 S0: 3708 total H0: 7721.03
+After trajectory: Hp: 3879.9 S: 3842.65 total H: 7722.55
+dH: 1.51559 prob: 4.5521
+Plaq: 0.583046
+LinkTrace: -0.0215159
+traj: 36
+Before trajectory: Hp0: 4055.35 S0: 3842.65 total H0: 7898
+After trajectory: Hp: 4126.14 S: 3770.8 total H: 7896.93
+dH: -1.06588 prob: 1
+Plaq: 0.590842
+LinkTrace: -0.0357267
+traj: 37
+Before trajectory: Hp0: 4101.91 S0: 3770.8 total H0: 7872.71
+After trajectory: Hp: 4154.65 S: 3717.57 total H: 7872.22
+dH: -0.487847 prob: 1
+Plaq: 0.596618
+LinkTrace: -0.0112603
+traj: 38
+Before trajectory: Hp0: 3887.63 S0: 3717.57 total H0: 7605.2
+After trajectory: Hp: 4080.21 S: 3521.84 total H: 7602.05
+dH: -3.15431 prob: 1
+Plaq: 0.617856
+LinkTrace: -0.0306344
+traj: 39
+Before trajectory: Hp0: 4171.64 S0: 3521.84 total H0: 7693.48
+After trajectory: Hp: 3965.38 S: 3729.36 total H: 7694.74
+dH: 1.2637 prob: 3.53849
+Plaq: 0.595339
+LinkTrace: -0.00898943
+traj: 40
+Before trajectory: Hp0: 4064.81 S0: 3729.36 total H0: 7794.17
+After trajectory: Hp: 4149.58 S: 3643.72 total H: 7793.3
+dH: -0.869019 prob: 1
+Plaq: 0.604631
+LinkTrace: -0.0318398
+traj: 41
+Before trajectory: Hp0: 3917.34 S0: 3643.72 total H0: 7561.06
+After trajectory: Hp: 4054.33 S: 3503.83 total H: 7558.16
+dH: -2.89954 prob: 1
+Plaq: 0.61981
+LinkTrace: -0.00587453
+traj: 42
+Before trajectory: Hp0: 4324.71 S0: 3503.83 total H0: 7828.54
+After trajectory: Hp: 4026.84 S: 3805.65 total H: 7832.5
+dH: 3.9544 prob: 52.1643
+Plaq: 0.58706
+LinkTrace: -0.0204081
+traj: 43
+Before trajectory: Hp0: 4172.56 S0: 3805.65 total H0: 7978.21
+After trajectory: Hp: 4155.53 S: 3823.77 total H: 7979.3
+dH: 1.0819 prob: 2.95029
+Plaq: 0.585095
+LinkTrace: 0.0200403
+traj: 44
+Before trajectory: Hp0: 4014.44 S0: 3823.77 total H0: 7838.21
+After trajectory: Hp: 4138.1 S: 3698.32 total H: 7836.41
+dH: -1.79954 prob: 1
+Plaq: 0.598707
+LinkTrace: -0.00731827
+traj: 45
+Before trajectory: Hp0: 4120.16 S0: 3698.32 total H0: 7818.48
+After trajectory: Hp: 4229.61 S: 3587.75 total H: 7817.37
+dH: -1.11222 prob: 1
+Plaq: 0.610704
+LinkTrace: 0.0218802
+traj: 46
+Before trajectory: Hp0: 4030.13 S0: 3587.75 total H0: 7617.88
+After trajectory: Hp: 3942.69 S: 3675.23 total H: 7617.92
+dH: 0.0354216 prob: 1.03606
+Plaq: 0.601212
+LinkTrace: 0.0152387
+traj: 47
+Before trajectory: Hp0: 4336.89 S0: 3675.23 total H0: 8012.12
+After trajectory: Hp: 4246.24 S: 3765.9 total H: 8012.14
+dH: 0.023552 prob: 1.02383
+Plaq: 0.591373
+LinkTrace: 0.0273411
+traj: 48
+Before trajectory: Hp0: 4219.29 S0: 3765.9 total H0: 7985.2
+After trajectory: Hp: 4297.6 S: 3688 total H: 7985.59
+dH: 0.396912 prob: 1.48723
+Plaq: 0.599827
+LinkTrace: -0.00520285
+traj: 49
+Before trajectory: Hp0: 4111.68 S0: 3688 total H0: 7799.68
+After trajectory: Hp: 4039.55 S: 3760.35 total H: 7799.9
+dH: 0.221346 prob: 1.24776
+Plaq: 0.591976
+LinkTrace: -0.00203796
