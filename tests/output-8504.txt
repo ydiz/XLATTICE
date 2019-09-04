@@ -1,0 +1,13 @@
+Lattice size: [4, 4, 4, 4]
+MPI decomposition: [1, 1, 2, 2]
+==============================
+starting trajectory: 0
+number of trajectories: 50
+do Metropolis: true
+noMetroUnitil: 20
+Integrator Name: LeapFrog
+trajL: 1
+MDsteps: 10
+Step Size: 0.1
+Wilson Action beta = 6.000000
+traj: 0

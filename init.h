@@ -48,13 +48,14 @@ void init(int argc, char **argv)
 {
   MPI_Init(&argc, &argv);
 
+  quiesce_node();
   set_default_mpi();
 
+  std::cout << "Lattice size: " << defaultLat() << std::endl;
   std::cout << "MPI decomposition: " << defaultMPI() << std::endl;
   std::cout << std::string(30, '=') << std::endl;
 
 
-  quiesce_node();
 }
 
 

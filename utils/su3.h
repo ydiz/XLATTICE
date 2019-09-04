@@ -26,6 +26,10 @@ struct su3_generator{
     std::copy(t.begin(), t.end(), ti[6].begin());
     t = {1,0,0, 0,1,0, 0,0,-2};
     std::copy(t.begin(), t.end(), ti[7].begin());
+
+
+    for(int i=0; i<7; ++i) ti[i] /= 2.;
+    ti[7] /= 2. * std::sqrt(3.);
   }
 };
 

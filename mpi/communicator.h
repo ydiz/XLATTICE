@@ -20,8 +20,8 @@ public:
   std::vector<int> processCoorFromRank(int rank) const;
 
   template<typename T>
-  typename std::enable_if<std::is_trivially_copyable<T>::value, void>::type Bcast(int root, T &data) const;
-  template<typename T> void Bcast(int root, std::vector<T> &data) const;
+  typename std::enable_if<std::is_trivially_copyable<T>::value, void>::type Bcast(int root, T &data) const; // Broadcast an object
+  template<typename T> void Bcast(int root, std::vector<T> &data) const;  //Broadcast a vector
 
   template<typename T> T sumMPI(T x) const;
 };

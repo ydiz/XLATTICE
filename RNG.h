@@ -1,5 +1,4 @@
-#ifndef XLATTICE_RNG_H
-#define XLATTICE_RNG_H
+#pragma once
 
 //two ways to call RNG: 1. rng(); 2. rng.rand()
 template<typename DIST>
@@ -22,8 +21,13 @@ template<typename DIST>
 template<class... T>
 RNG<DIST>::RNG(T... args) : dist(args...)
 {
-  auto seed = std::chrono::system_clock::now().time_since_epoch().count();
-  eng.seed(seed);
+  // auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+  // eng.seed(seed);
+  eng.seed(0);
+  int rank;
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+  eng.discard(rank * 10e8);
+
   rand = [this]{return dist(eng);};  //"this" can only be captured by copy, i.e. [this] or [=]
 }
 
@@ -50,7 +54,7 @@ void gaussian(LatticeMatrix &ret)
   for(int i=0; i<8; ++i)
   {
     rng.fill(lat);
-    ret += lat * ss.ti[i];
+    ret += lat * ss.ti[i];  // FIXME: is this convention right??
   }
 }
 
@@ -59,4 +63,3 @@ void gaussian(GaugeField &ret)
   for(auto &x: ret._data) gaussian(x);
 }
 
-#endif

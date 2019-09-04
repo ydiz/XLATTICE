@@ -46,7 +46,7 @@
 #include "field/lattice.h"
 #include "field/field.h"
 #include "field/overload.h"
-#include "unary.h"
+#include "math_operations/math_operations.h"
 #include "cshift.h"
 
 #include "utils/misc.h"
@@ -58,6 +58,9 @@
 #include "RNG.h"
 
 #include "HMC/actions.h"
+#include "HMC/WilsonAction.h"
+#include "HMC/integrator.h"
+#include "HMC/hmc.h"
 
 // using Complex = std::complex<double>;
 // using Matrix3 = Matrix<Complex, 3> ;
