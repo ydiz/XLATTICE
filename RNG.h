@@ -54,7 +54,7 @@ void gaussian(LatticeMatrix &ret)
   for(int i=0; i<8; ++i)
   {
     rng.fill(lat);
-    ret += lat * ss.ti[i];  // FIXME: is this convention right??
+    ret += lat * ss.ti[i]; 
   }
 }
 
